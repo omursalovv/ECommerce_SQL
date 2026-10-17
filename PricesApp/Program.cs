@@ -33,14 +33,16 @@ for (var i = 0; i < 100; i++)
 
     tasks.Add(new SqlConnection(connectionString).QueryAsync(@"
         INSERT INTO [dbo].[Prices]
-               ([SupplierName]
+               (CreatedOn
+               ,[SupplierName]
                ,[Brand]
                ,[Article]
                ,[Qty]
                ,[Price]
                ,[Descr])
          VALUES
-               (@SupplierName
+               (getdate()
+               ,@SupplierName
                ,@Brand
                ,@Article
                ,@Qty

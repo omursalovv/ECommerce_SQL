@@ -35,6 +35,7 @@ CREATE TABLE dbo.Suppliers
 -- Внешний источник..
 CREATE TABLE dbo.Prices
 (
+    [CreatedOn] datetime,
     [PriceId] int IDENTITY(1,1) PRIMARY KEY,
     [SupplierName] varchar(20), 
     [Brand] varchar(20), 
