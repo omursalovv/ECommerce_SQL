@@ -1,0 +1,3 @@
+{
+  "dbConnectionStr": "Data Source=localhost\\SQLEXPRESS;Initial Catalog=ECommerce;Integrated Security=True;TrustServerCertificate=True;"
+}
