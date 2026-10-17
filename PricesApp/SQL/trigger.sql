@@ -15,7 +15,7 @@ BEGIN TRY
     declare @articleId bigint = @@IDENTITY;
 
     -- Добавляем бренд
-    INSERT INTO dbo.Brands (Brand)
+    /*INSERT INTO dbo.Brands (Brand)
     SELECT Brand
     FROM INSERTED as ins
     join dbo.Brands as art
@@ -24,7 +24,7 @@ BEGIN TRY
 
     -- Добавляем карточку товара
     INSERT INTO dbo.Sku (ArticleId, BrandId)
-    values (@articleId, @brandId)
+    values (@articleId, @brandId)*/
 END TRY
 BEGIN CATCH
     --SET NOCOUNT ON;

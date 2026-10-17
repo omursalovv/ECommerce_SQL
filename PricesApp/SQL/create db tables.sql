@@ -3,19 +3,19 @@ use ECommerce
 CREATE TABLE dbo.[Articles]
 (
     [ArticleId] bigint PRIMARY KEY, 
-    [Article] varchar unique
+    [Article] varchar(20) unique
 );
 
 CREATE TABLE dbo.Brands
 (
     [BrandId] int PRIMARY KEY,
-    [Brand] varchar unique
+    [Brand] varchar(20) unique
 );
 
 CREATE TABLE dbo.Descr
 (
     [OfferId] bigint PRIMARY KEY, 
-    [Descr] varchar
+    [Descr] varchar(20)
 );
 
 CREATE TABLE dbo.Sku
@@ -29,20 +29,20 @@ CREATE TABLE dbo.Sku
 CREATE TABLE dbo.Suppliers
 (
     [SupplierId] int PRIMARY KEY,
-    [Name] varchar,
+    [Name] varchar(20),
 );
 
 -- Внешний источник..
 CREATE TABLE dbo.Prices
 (
-    [PriceId] int PRIMARY KEY,
-    [SupplierId] int, 
-    [Brand] varchar, 
-    [Article] varchar, 
+    [PriceId] int IDENTITY(1,1) PRIMARY KEY,
+    [SupplierName] varchar(20), 
+    [Brand] varchar(20), 
+    [Article] varchar(20), 
     [Qty] int, 
     [Price] money, 
-    [Descr] varchar,
-    [Error] varchar
+    [Descr] varchar(20),
+    [Error] varchar(20)
 );
 
 CREATE TABLE dbo.Offers
